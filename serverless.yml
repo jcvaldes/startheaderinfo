@@ -14,8 +14,8 @@ plugins:
   - serverless-offline
 
 functions:
-  name: startheaderinfo
   startheaderinfo:
     handler: handler.execute
+    name: startheaderinfo
     events:
       - httpApi: "*"
