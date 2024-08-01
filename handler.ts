@@ -1,9 +1,9 @@
 export async function run(event, context, cb) {
   return {
     statusCode: 200,
-    response: {
+    body: JSON.stringify({
       region: "argentina",
-      utc: -3,
-    },
+      utf: -3,
+    }),
   };
 }

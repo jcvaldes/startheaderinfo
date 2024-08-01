@@ -1,5 +1,3 @@
-organization: globalhitss
-
 service: startheaderinfo
 
 provider:
@@ -18,4 +16,6 @@ functions:
     handler: handler.run
     name: startheaderinfo
     events:
-      - httpApi: "*"
+      - httpApi:
+          path: /startheaderinfo
+          method: get
