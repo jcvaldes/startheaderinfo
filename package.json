@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "offline:start": "sls offline start --noPrependStageInUrl"
+  },
+  "devDependencies": {
+    "serverless-offline": "^14.0.0",
+    "serverless-plugin-typescript": "^2.1.5"
+  }
+}
