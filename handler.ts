@@ -1,4 +1,4 @@
-export async function startheaderinfo(event, context, cb) {
+export async function execute(event, context, cb) {
   return {
     statusCode: 200,
     response: {

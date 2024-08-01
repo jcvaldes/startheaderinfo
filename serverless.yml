@@ -16,6 +16,6 @@ plugins:
 functions:
   name: startheaderinfo
   startheaderinfo:
-    handler: handler.startheaderinfo
+    handler: handler.execute
     events:
       - httpApi: "*"
