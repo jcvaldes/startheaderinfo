@@ -5,12 +5,13 @@ service: startheaderinfo
 provider:
   name: aws
   runtime: nodejs20.x
+  stages: prod
 
 plugins:
   - serverless-offline
 
 functions:
-  hello:
-    handler: handler.hello
+  startheaderinfo:
+    handler: handler.startheaderinfo
     events:
       - httpApi: "*"
