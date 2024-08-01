@@ -6,11 +6,15 @@ provider:
   name: aws
   runtime: nodejs20.x
   stage: prod
+  memorySize: 128
+  logRetentionInDays: 1
+  timeout: 20
 
 plugins:
   - serverless-offline
 
 functions:
+  name: startheaderinfo
   startheaderinfo:
     handler: handler.startheaderinfo
     events:
