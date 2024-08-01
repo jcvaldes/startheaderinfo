@@ -25,11 +25,7 @@ jobs:
           # args: -c "serverless plugin install --name <plugin-name> && serverless deploy"
           args: -c "serverless deploy"
           entrypoint: /bin/sh
-      - name: Get API Gateway URL
-        id: get-url
-        run: echo "::set-output name=url::$(npx serverless info --verbose | grep 'ServiceEndpoint' | awk '{print $2}')"
-      - name: Echo API URL
-        run: echo ${{ steps.get-url.outputs.url }}
+
         env:
           #   SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           # or if using AWS credentials directly
