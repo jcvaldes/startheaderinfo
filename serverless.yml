@@ -1,7 +1,11 @@
+organization: globalhitss
+
+service: startheaderinfo
+
 provider:
   name: aws
   runtime: nodejs20.x
-  stages: prod
+  stage: prod
 
 plugins:
   - serverless-offline
