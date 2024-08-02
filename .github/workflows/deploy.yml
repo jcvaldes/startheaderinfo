@@ -25,8 +25,4 @@ jobs:
       - name: Serverless remove
         uses: serverless/github-action@v3.2
         with:
-          args: remove
-      - name: Serverless deploy
-        uses: serverless/github-action@v3.2
-        with:
           args: deploy
