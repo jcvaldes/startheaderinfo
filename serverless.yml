@@ -1,7 +1,10 @@
 service: startheaderinfo
+
 package:
+  individually: true
   patterns:
-    - "!node_modules/**" # no need to add this, this plugin does it for you
+    - "!node_modules/**"
+    - "!src/**"
 
 custom:
   includeDependencies:
