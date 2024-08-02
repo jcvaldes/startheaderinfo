@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci --force
-      - name: Serverless remove
+      - name: Serverless deploy
         uses: serverless/github-action@v3.2
         with:
           args: deploy
