@@ -22,11 +22,3 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7 # Update with your python version
-      - run: npm ci --force
-      - name: Serverless Install
-        run: npm i -g serverless
-      - name: Deploy with Serverless
-        env:
-          LOG_LEVEL: debug
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
