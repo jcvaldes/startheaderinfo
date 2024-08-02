@@ -1,5 +1,13 @@
 service: startheaderinfo
 
+package:
+  patterns:
+    - "!node_modules/**" # no need to add this, this plugin does it for you
+
+custom:
+  includeDependencies:
+    enableCaching: true
+
 provider:
   name: aws
   runtime: nodejs20.x
@@ -10,6 +18,9 @@ provider:
 
 plugins:
   - serverless-offline
+    # disminuye el peso de la lambda cuando se deploya, no incluye los node_modules
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
 
 functions:
   startheaderinfo:
