@@ -1,9 +1,9 @@
 export async function run(event, context, cb) {
-  console.log(event);
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: "Go Serverless v4! Your function executed successfully!",
+      region: "argentina",
+      utc: -3,
     }),
   };
 }
