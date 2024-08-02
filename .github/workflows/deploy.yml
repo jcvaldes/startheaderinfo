@@ -19,12 +19,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci --force
-      - name: Serverless remove
+      - name: Serverless remove & deploy
         uses: serverless/github-action@v3.2
         with:
-          args: remove
+          args: -c "serverless remove && serverless deploy"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Serverless deploy
-        run: serverless deploy
