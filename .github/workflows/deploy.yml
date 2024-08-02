@@ -19,19 +19,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci --force
-      - name: Install Plugin and Deploy
-        uses: serverless/github-action@v3.2
+      - name: Serverless Deploy
+        uses: serverless/github-action@master
         with:
           # args: -c "serverless plugin install --name <plugin-name> && serverless deploy"
-          args: -c "serverless deploy"
+          args: deploy
           entrypoint: /bin/sh
         env:
           #   SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           # or if using AWS credentials directly
+          LOG_LEVEL: debug
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Get API Gateway URL
-        id: get-url
-        run: echo "::set-output name=url::$(npx serverless info --verbose | grep 'ServiceEndpoint' | awk '{print $2}')"
-      - name: Echo API URL
-        run: echo ${{ steps.get-url.outputs.url }}

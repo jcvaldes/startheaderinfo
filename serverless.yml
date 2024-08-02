@@ -16,4 +16,6 @@ functions:
     handler: handler.run
     name: startheaderinfo
     events:
-      - httpApi: "*"
+      - httpApi:
+          path: /startheaderinfo
+          method: get
