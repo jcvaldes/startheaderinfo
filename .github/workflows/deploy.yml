@@ -22,3 +22,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7 # Update with your python version
+      - name: Serverless Deploy
+        uses: sumeetweb/serverless-deploy@master
+        with:
+          args: "" # any deploy arguments you want to pass
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
