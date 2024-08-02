@@ -1,4 +1,11 @@
 service: startheaderinfo
+package:
+  patterns:
+    - "!node_modules/**" # no need to add this, this plugin does it for you
+
+custom:
+  includeDependencies:
+    enableCaching: true
 
 provider:
   name: aws
@@ -11,6 +18,8 @@ provider:
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
 
 functions:
   startheaderinfo:
