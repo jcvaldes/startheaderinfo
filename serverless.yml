@@ -23,7 +23,7 @@ plugins:
 
 functions:
   startheaderinfo:
-    handler: handler.run
+    handler: src/handler.run
     name: startheaderinfo
     events:
       - httpApi:
