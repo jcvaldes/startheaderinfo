@@ -9,6 +9,7 @@ provider:
   timeout: 10
 
 plugins:
+  - serverless-plugin-typescript
   - serverless-offline
 
 functions:
