@@ -1,2 +1,3 @@
+@url=https://jwng3cvgf2.execute-api.us-east-1.amazonaws.com
 ### Startheaderinfo
-GET  https://jwng3cvgf2.execute-api.us-east-1.amazonaws.com/startheaderinfo
+GET {{url}}/startheaderinfo
