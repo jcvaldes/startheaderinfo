@@ -19,7 +19,6 @@ provider:
   timeout: 10
 
 plugins:
-  - serverless-plugin-typescript
   - serverless-offline
   - serverless-plugin-common-excludes
   - serverless-plugin-include-dependencies
