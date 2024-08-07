@@ -1,5 +1,5 @@
 @url=https://fxowucnb6a.execute-api.us-east-1.amazonaws.com
 ### Startheaderinfo
 GET {{url}}/startheaderinfo
-X-End-User-Location: argentina
+X-End-User-Location: argentinas
 X-End-User-Time-Zone: GMT-3

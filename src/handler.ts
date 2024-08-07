@@ -22,7 +22,7 @@ const countryValidate = (country) => {
 
 export async function run(event: APIGatewayEvent, context: Context, cb: Callback): APIGatewayProxyResult {
   const { 'x-end-user-location': xEndUserLocation, 'x-end-user-time-zone': xEndUserTimeZone } = event.headers
-  // validaciones de region validas
+
   if (countryValidate(xEndUserLocation)) {
     return {
       statusCode: 200,
@@ -34,6 +34,6 @@ export async function run(event: APIGatewayEvent, context: Context, cb: Callback
       }),
     }
   } else {
-    return cb({ statusCode: 404, body: `El país ${xEndUserLocation} no está soportado` })
+    return cb({ statusCode: 404, body: JSON.stringify(`El país ${xEndUserLocation} no está soportado`) })
   }
 }
