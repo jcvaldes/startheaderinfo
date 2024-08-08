@@ -34,6 +34,6 @@ export async function run(event: APIGatewayEvent, context: Context, cb: Callback
       }),
     }
   } else {
-    return { statusCode: 404, body: `El país ${xEndUserLocation} no está soportado` }
+    return { statusCode: 404, body: JSON.stringify({ msg: `El país ${xEndUserLocation} no está permitido` }) }
   }
 }
